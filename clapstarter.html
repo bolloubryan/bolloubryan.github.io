@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	ClapStarter
+-->
+<html>
+	<head>
+		<title>Clapstarter</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<style>
+		.live_trash {
+		   display : none;
+		}
+	</style>
+	<body class="is-preload">
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+
+						<audio id="myAudio">
+						  <!--<source src="audio/'Slow clapping sounds (1 hour)-[AudioTrimmer.com].mp3'" type="audio/mpeg">-->
+						  <!--<source src="audio/Slow clapping sounds (1 hour)-[AudioTrimmer.com].mp3" type="audio/mpeg">-->
+						  <source src="audio/Slow clapping sounds (1 hour)-[AudioTrimmer.com].mp3" type="audio/mpeg">
+						  Your browser does not support the audio element.
+						</audio>
+
+						<p>Click the buttons to play or pause the audio.</p>
+
+						<!--<button onmousedown="playAudio()" onmouseup="pauseAudio()" type="button">Play Audio</button>-->
+						<img class='static_trash' id='static_btn' src="assets/clap.PNG" alt='Delete image' />
+
+						<img class='live_trash' id='live_btn' src="assets/clap.gif" alt='Delete image' />
+
+
+						<!--<button onclick="playAudio()" type="button">Play Audio</button>
+						<button onclick="pauseAudio()" type="button">Pause Audio</button>-->
+						
+						<!--<img class='static_trash' id = 'static_btn' src='https://collaboratescience.com/stack/googs/trash_static.png' alt='Delete image' width='100' height='100' />
+						<img class='live_trash' id = 'live_btn' src='https://i.postimg.cc/1RGh8PpK/delete.gif' alt='Delete image' width='100' height='100' />-->
+
+						<header>
+						</header>
+
+						<footer>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Bryan Bollou 2024.</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!--<script>
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+			</script>-->
+
+
+            <!-- WORKING 
+			<script>
+			var x = document.getElementById("myAudio"); 
+
+			function playAudio() { 
+			  x.play(); 
+			} 
+
+			function pauseAudio() { 
+			  x.pause(); 
+			} 
+			</script> -->
+
+
+			<script>
+			var x = document.getElementById("myAudio");
+
+			let static_elem = document.getElementById("static_btn")
+			let live_elem = document.getElementById("live_btn")
+
+			static_elem.addEventListener("mousedown", function( event ) {   
+			    event.target.style.display = "none";
+			    live_elem.style.display = "block";
+			  	x.play(); 
+
+
+			})
+
+			live_elem.addEventListener("mouseup", function( event ) {   
+			    static_elem.style.display = "block";
+			    live_elem.style.display = "none";
+			  	x.pause();
+
+			})
+			</script>
+
+	</body>
+</html>
