@@ -102,6 +102,22 @@
 			  	x.pause();
 
 			})
+
+			static_elem.addEventListener("touchstart", function( event ) {   
+			    event.target.style.display = "none";
+			    live_elem.style.display = "block";
+			  	x.play(); 
+
+
+			})
+
+			live_elem.addEventListener("touchend", function( event ) {   
+			    static_elem.style.display = "block";
+			    live_elem.style.display = "none";
+			  	x.pause();
+
+			})
+			
 			</script>
 
 	</body>
