@@ -88,6 +88,7 @@
 			let static_elem = document.getElementById("static_btn")
 			let live_elem = document.getElementById("live_btn")
 
+			//for desktop
 			static_elem.addEventListener("mousedown", function( event ) {   
 			    event.target.style.display = "none";
 			    live_elem.style.display = "block";
@@ -103,6 +104,7 @@
 
 			})
 
+			//for mobile
 			static_elem.addEventListener("touchstart", function( event ) {   
 			    event.target.style.display = "none";
 			    live_elem.style.display = "block";
@@ -117,6 +119,10 @@
 			  	x.pause();
 
 			})
+
+			//prevent context menu from popping up
+			static_elem.addEventListener("contextmenu", (e) => {e.preventDefault()});
+			live_elem.addEventListener("contextmenu", (e) => {e.preventDefault()});	
 			
 			</script>
 
