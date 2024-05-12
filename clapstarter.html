@@ -121,9 +121,20 @@
 			})
 
 			//prevent context menu from popping up
-			static_elem.addEventListener("contextmenu", (e) => {e.preventDefault()});
-			live_elem.addEventListener("contextmenu", (e) => {e.preventDefault()});	
-			
+			static_elem.addEventListener("contextmenu", (e) => {
+			e.preventDefault()
+			e.stopPropagation();
+    			e.stopImmediatePropagation();
+    			return false;
+			});
+
+			live_elem.addEventListener("contextmenu", (e) => {
+			e.preventDefault()
+			e.stopPropagation();
+    			e.stopImmediatePropagation();
+    			return false;
+			});
+
 			</script>
 
 	</body>
