@@ -1,15 +1,23 @@
 <html>
 
-<!-- SortableJS CDN -->
-<script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
-
 <head>
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<p id="message"> What Time is it?</p>
+<body>
 
-<button onclick="tellTime()"> Answer Him! </button>
+<div>
+  <p>My List</p>
+  <ul class="sortable" id="sortablelist">
+  </ul>
+</div>
+
+
+</body>
+
+<!-- SortableJS CDN -->
+<script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
 
 <script src="js/script.js"></script>
 
