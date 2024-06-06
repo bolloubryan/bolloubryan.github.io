@@ -7,12 +7,50 @@
 
 <body>
 
-<div>
-  <p>My List</p>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div id="header"> <h1>Welcome to the Ranker!</h1></div>
+
+<div class="cards">
+
+<div class="card">
+  <p>RANK 'EM</p>
   <ul class="sortable" id="sortablelist">
   </ul>
+  <button type="button"> Export (Comin Soon) </button>
+  <br>
+  <br>
+  <!--
+  <button type="button"> Top </button>
+  -->
 </div>
 
+<div class="card" id="entryside">
+
+<p>Insert text to rank under here:</p>
+
+<textarea id="data_to_rank" name="data" rows="40" cols="70">Enter your list here, with the above delimeter...</textarea>
+  <br>
+
+  <p>Select the way you will parse:</p>
+
+<input type="radio" id="try" name="parser" value=","><label> Comma Delimited (",")</label><br>
+<input type="radio" name="parser" value="newline"><label> New Line Break ("\n")</label><br>
+<input type="radio" id="other_parser" name="parser" value=""><label> Custom</label><input type="text" id="radiotext" name="other_reason" /> <br> <br>
+
+  <input type="submit" value="Submit" onclick="getAreaText()"> <br> <br>
+
+  <p id="delimiter"></p>
+
+</div>
+
+<!--
+<div class="card">
+  <button type="button"> Top </button>
+</div>
+-->
+
+</div>
 
 </body>
 
