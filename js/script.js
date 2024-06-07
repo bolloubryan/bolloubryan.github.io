@@ -45,7 +45,6 @@ function getAreaText() {
             }
 
     if (selected) {
-      console.log("got here")
       var data_to_rank = document.getElementById("data_to_rank").value;
       var arr = [];
       if(delimiter==="newline" || delimiter==="\n") {
@@ -78,5 +77,27 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+//copy to clipboard funcationality
+function myFunction() {
+  console.log("clipboarding")
+  var currentRanking = document.querySelectorAll("ul#sortablelist li");
+  var copyText = ""
+  for (i=0;i<currentRanking.length;i++){
+    copyText = copyText.concat(currentRanking[i].innerText)
+  }
+  console.log(copyText)
+  //var copyText = document.getElementById("myInput");
+  //copyText.select();
+  //copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
 
 
