@@ -18,7 +18,13 @@
   <p>RANK 'EM</p>
   <ul class="sortable" id="sortablelist">
   </ul>
-  <button type="button"> Export (Comin Soon) </button>
+
+  <div class="tooltip">
+  <button type="button" onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip"> Copy to Clipboard</span>
+  Copy text
+   </button>
+   </div>
   <br>
   <br>
   <!--
@@ -30,7 +36,7 @@
 
 <p>Insert text to rank under here:</p>
 
-<textarea id="data_to_rank" name="data" rows="35" cols="70">Enter your list here, with the below delimeter...</textarea>
+<textarea id="data_to_rank" name="data" rows="35" cols="70">Enter your list here, with the above delimeter...</textarea>
   <br>
 
   <p>Select the way you will parse:</p>
